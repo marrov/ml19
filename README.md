@@ -1,6 +1,14 @@
 # FLOW Winter School on Machine Learning and Data-Driven Methods
 
-General repository for the FLOW Winter School on Machine Learning and Data-Driven Methods (ml19 for short)
+General repository for the FLOW Winter School on Machine Learning and Data-Driven Methods.
+
+December 2-5, 2019
+
+Linné FLOW Centre, KTH Mechanics
+
+Royal Institute of Technology
+
+Stockholm, Sweden
 
 ![Winter @ KTH](https://farm9.static.flickr.com/8011/7149987055_b9300791f6_b.jpg)
 
@@ -21,7 +29,7 @@ git clone https://github.com/mrovirasacie/ml19
 In order to use `ml19` several [Python 3](https://www.python.org/) packages are required. Creating a brand new [Conda](https://docs.conda.io/en/latest/) environment for this is recommended. This can be done easily with the provided `yml` file as follows:
 
 ```
-conda create --name ml19 --file ml19_fill.yml
+conda create --name ml19 --file ml19_full.yml
 conda activate ml19
 ```
 
