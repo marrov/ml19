@@ -31,6 +31,14 @@ After executing these commands a new Conda environment names `ml19` will be crea
 conda deactivate
 ```
 
+## Monday 02/12/19
+
+## Tuesday 03/12/19
+
+## Wednesday 04/12/19
+
+## Thursday 05/12/19
+
 ## Author
 
 * [Marc Rovira](https://github.com/mrovirasacie)
