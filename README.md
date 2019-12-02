@@ -140,9 +140,20 @@ There exists this dimension if a kerner is symmetric and positive semi-definite.
 
 [Luca Gastoni's github repository for the session](https://github.com/lguas/FLOW19_MLSchool)
 
-**Homework**: make gradient descent 
+**Homework**: make stochastic gradient descent implementation in the `fit-sine.ipynb` jupyter notebook. Use [this](https://towardsdatascience.com/gradient-descent-in-python-a0d07285742f) as inspiration.
 
 
+### Uncertainty quantification (UQ)
+
+Perturbation methods require the linearization of the model so it is not a good option for non-linear physical problems.
+
+Sample based problems are better suited for this. An example is Monte Carlo (MC) simulations.
+
+**Important**: error in a mean sample: mean_sample = sigma / sqrt(N) where N are samples independent.
+
+MC simulations are easy to use but usually require ~10^6 samples which is unfeasible in reaslity.
+
+Stochastic spectral methods: polynomial chaos expansion (PCE) is the most relevant method for UQ studies. After building the surrogate model from orthogonal polynomial function we can obtain errors in mean and variance estimate of ~10^-10 with *as little as 25 sampling points*!
 
 ## Tuesday - 03/12/19
 
