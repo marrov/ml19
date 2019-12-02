@@ -43,13 +43,83 @@ After executing these commands a new Conda environment names `ml19` will be crea
 conda deactivate
 ```
 
-## Monday 02/12/19
+## Monday -  02/12/19
 
-## Tuesday 03/12/19
+### Introduction to Machine Learning & Regression
 
-## Wednesday 04/12/19
+#### Canonical learning problems:
+  - Supervised regression
+  - Supervised classification
+  - Unsupervised learning:
+    - Classification
+    - Dimensionality reduction
+  - Reinforment learning: does not have a penalty for failing - only rewards the correct set of actions. Works best when you know most things about your world and you have a closer environmnet. Used for hyperparameter optimisation.
 
-## Thursday 05/12/19
+#### Supervised regression
+
+Optimization over two main variables:
+  1. Loss function (error of data wrt prediction)
+  2. Regularization (measure of complexity)
+
+Overfitting will lead to low training error - the performance of a model should no be measured on training error. Instead we define new data - a test dataset - and calculate the error with respect to new test data instead of the old "learning" dataset.
+
+So overfitting is when *training error* is **low** but *test error* is **high**. 
+
+Overfitting and underfitting can be measured with bias and variance. A graphical overview of these can be seen below:
+
+![Bias and variance](https://miro.medium.com/max/978/1*CgIdnlB6JK8orFKPXpc7Rg.png)
+
+
+For example linear functions have low bias.
+
+##### Nested cross-validation
+
+Usually data is small - subsets are not satisticallly significant. Then cross validation is required.
+
+Pipeline for model selection:
+  1. Gather data
+  2. Divide set up in 3 sets: `train`, `validation` and `test` sets
+  3. Model selection with `validation`
+  4. Train with `train` U `validation`
+  5. Measure performance in `test`
+
+[Read more on nested cross-validation](https://weina.me/nested-cross-validation/)
+
+##### L1 regularizer
+
+**Lasso Regression** = *squared-error loss* + *L1 regularization*
+
+L1 regularization is taking L1 norm (absvalue) of weights.
+
+LASSO ≡ Least absolute shrinkage and selection operator
+
+L1 regularizator promotes sparsity - i.e. weight actually go to zero. Is great for feature selection. This encourages noise reduction and we see what inputs really afect the model.
+
+This image shows why LASSO is able to "turn off" some weights. *Left* is **LASSO** and *right* is **Ridge**
+
+![LASSO vs Ridge](https://s3-ap-south-1.amazonaws.com/av-blog-media/wp-content/uploads/2017/06/05215637/regular1.png)
+
+Note: *data matrix* has input data in columns - rows track all inputs.
+
+##### Epsilon-sensitive loss and support vector regression
+
+Squared-error loss is not robust to outliers. To solve this another loss function is the epsilon-sensitive loss.
+
+Passed a certain value of `eps = |y_test-y_predict|`
+
+**Support Vector Regression** = *epison-sensitive loss* + *L2 regularization*
+
+The visual representation of this is:
+
+![Support vector regression](https://i.imgur.com/GsMvfaw.png)
+
+
+
+## Tuesday - 03/12/19
+
+## Wednesday - 04/12/19
+
+## Thursday - 05/12/19
 
 ## Author
 
