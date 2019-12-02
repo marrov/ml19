@@ -136,6 +136,14 @@ Basically boils down to the fact that a simple function in an initial low dimens
 
 There exists this dimension if a kerner is symmetric and positive semi-definite.
 
+### Hand-on session I: Regression 
+
+[Luca Gastoni's github repository for the session](https://github.com/lguas/FLOW19_MLSchool)
+
+**Homework**: make gradient descent 
+
+
+
 ## Tuesday - 03/12/19
 
 ## Wednesday - 04/12/19
