@@ -109,11 +109,32 @@ Passed a certain value of `eps = |y_test-y_predict|`
 
 **Support Vector Regression** = *epison-sensitive loss* + *L2 regularization*
 
-The visual representation of this is:
+We employ Lagrange multipiers - review the math! 
 
-![Support vector regression](https://i.imgur.com/GsMvfaw.png)
+Two hyperparameters:
+  - *C* : determines the trade-off between the model complexity andthe degree to which deviations larger than `eps` are tolerated.
+  - *eps* : affects the number of support vectors
 
+##### Iterative optimization
 
+- Gradient descent (GD): 
+  1. Arbitrary intial point
+  2. Compute gradient
+  3. Take setp in direction of minus gradient
+  4. Repeat step 2-3 until convergence
+
+- Stochastic gradient descent (SDG): gradient descent is slow because gradient computation can be expensive for multiple datasets. Then only one dataset is used.
+  - Best metaphor is that many not well though-out steps in directions close to the correct one are better than fewer optimal steps in the absolute optimum direction.
+
+[Review this difference very visually here](https://www.youtube.com/watch?v=IHZwWFHWa-w)
+
+How to choose the learning rate `eta` (i.e. the length of the step in the minus gradient direction)
+
+##### The Kernel Trick
+
+Basically boils down to the fact that a simple function in an initial low dimensional space might be equivalent to the dot product a high dimensional space.
+
+There exists this dimension if a kerner is symmetric and positive semi-definite.
 
 ## Tuesday - 03/12/19
 
