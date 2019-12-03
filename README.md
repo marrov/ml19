@@ -157,6 +157,12 @@ Stochastic spectral methods: polynomial chaos expansion (PCE) is the most releva
 
 ## Tuesday - 03/12/19
 
+### Neural Networks
+
+For category classifier, the L2 norm distance from the score to the label doesn't usually work well. A better option is the `SoftMax` algorithm which turns score to "prababilities" - it notmalizes scores from 0 to 1 and they all sum to 1. So it can be seen as a PDF of the absolute value of the scores. Then it encourages learning wrt the log of the probability. Then it will train faster when very low probabilities are yielded. 
+
+Not well understood: why do neural networks not overfit even when # parameter >> # test data
+
 ## Wednesday - 04/12/19
 
 ## Thursday - 05/12/19
