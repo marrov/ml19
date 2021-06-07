@@ -169,4 +169,4 @@ Not well understood: why do neural networks not overfit even when # parameter >>
 
 ## Author
 
-* [Marc Rovira](https://github.com/mrovirasacie)
+* [Marc Rovira](https://github.com/marroc)
